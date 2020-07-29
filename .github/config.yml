@@ -1,0 +1,31 @@
+# Configuration for welcome - https://github.com/behaviorbot/welcome
+
+# Configuration for new-issue-welcome - https://github.com/behaviorbot/new-issue-welcome
+
+# Comment to be posted to on first time issues
+newIssueWelcomeComment: >
+  Thanks for opening your first issue here! Engagement like this is essential for open source projects! :hugs:
+
+  <br>If you haven't done so already, check out [EBP's Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md).
+  Also, please try to follow the issue template as it helps other community members to contribute more effectively.
+
+  <br>Welcome to the EBP community! :tada:
+
+# Configuration for new-pr-welcome - https://github.com/behaviorbot/new-pr-welcome
+
+# Comment to be posted to on PRs from first time contributors in your repository
+newPRWelcomeComment: >
+  Thanks for submitting your first pull request! You are awesome! :hugs:
+
+  <br>If you haven't done so already, check out [EBP's Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md),
+  our [Contributing Guide](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md), as this will greatly help the review process.
+
+  <br>Welcome to the EBP community! :tada:
+
+# Configuration for first-pr-merge - https://github.com/behaviorbot/first-pr-merge
+
+# Comment to be posted to on pull requests merged by a first time user
+firstPRMergeComment: >
+  Congrats on your first merged pull request in this project! :tada:
+
+  <br>Thank you for contributing, we are very proud of you! :heart:
