@@ -1,9 +1,10 @@
 # Development Conventions
 
 Welcome to the Executable Book Project (EBP)!
-We're excited you're here and want to contribute.
+We're excited you're here and want to contribute 🎉.
 
 This page outlines conventions and best practices for development and maintenance across all repositories in the EBP organisation, to help the community make the best tools possible.
+These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
 Thank you for you interest in contributing ✨
 
