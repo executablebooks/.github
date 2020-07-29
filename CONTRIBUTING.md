@@ -7,6 +7,33 @@ This page outlines conventions and best practices for development and maintenanc
 
 Thank you for you interest in contributing ✨
 
+- [Development Conventions](#development-conventions)
+  - [Coding Style](#coding-style)
+  - [Testing](#testing)
+  - [Documentation](#documentation)
+  - [Git Branches](#git-branches)
+  - [Opening a Pull Request](#opening-a-pull-request)
+  - [Pull Request Reviews](#pull-request-reviews)
+    - [Sources](#sources)
+    - [Standards](#standards)
+      - [Approving changes](#approving-changes)
+      - [Vigilance](#vigilance)
+      - [Communication](#communication)
+    - [Check-list - What to look for](#check-list---what-to-look-for)
+      - [Scope](#scope)
+      - [Design](#design)
+      - [Functionality](#functionality)
+      - [Complexity](#complexity)
+      - [Tests](#tests)
+      - [Naming](#naming)
+      - [Comments](#comments)
+      - [Style & Consistency](#style--consistency)
+  - [Merging Pull Requests](#merging-pull-requests)
+  - [Commit Messages](#commit-messages)
+  - [Releases and Change-logs](#releases-and-change-logs)
+    - [The process of creating a release](#the-process-of-creating-a-release)
+  - [Deprecations](#deprecations)
+
 (dev/code_style)=
 
 ## Coding Style
