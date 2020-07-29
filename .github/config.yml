@@ -17,8 +17,8 @@ newIssueWelcomeComment: >
 newPRWelcomeComment: >
   Thanks for submitting your first pull request! You are awesome! :hugs:
 
-  <br>If you haven't done so already, check out [EBP's Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md),
-  our [Contributing Guide](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md), as this will greatly help the review process.
+  <br>If you haven't done so already, check out [EBP's Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md)
+  and our [Contributing Guide](https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md), as this will greatly help the review process.
 
   <br>Welcome to the EBP community! :tada:
 
