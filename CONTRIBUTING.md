@@ -295,7 +295,7 @@ Keywords/emojis are adapted from [Emoji-Log](https://github.com/ahmadawais/Emoji
 - `✨  NEW:` (`:sparkles:`) — to introduce a new feature(s).
 - `👌 IMPROVE:` (`:ok_hand:`) — to improve an existing code/feature (with no breaking changes).
 - `🐛 FIX:` (`:bug:`) — to fix a code bug.
-- `📖 DOCS:` (`:book:`) — to add new documentation.
+- `📚 DOCS:` (`:books:`) — to add new documentation.
 - `✏️ REWRITE:` (`:pencil2:`) — to apply fixes (like correcting typos) to existing documentation.
 - `🧪  TEST:` (`:testube:`) — to add additional testing only.
 - `🚀 RELEASE:` (`:rocket:`) — to bump the package version for release.
