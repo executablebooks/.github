@@ -9,6 +9,7 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 Thank you for you interest in contributing ✨
 
 - [Development Conventions](#development-conventions)
+  - [Design Philosophy](#design-philosophy)
   - [Coding Style](#coding-style)
   - [Testing](#testing)
   - [Documentation](#documentation)
@@ -34,6 +35,38 @@ Thank you for you interest in contributing ✨
   - [Releases and Change-logs](#releases-and-change-logs)
     - [The process of creating a release](#the-process-of-creating-a-release)
   - [Deprecations](#deprecations)
+
+(dev/design-philosophy)=
+
+## Design Philosophy
+
+There are few high-level principles that this project tries to follow in making
+both technical and community decisions. They goals to shoot for, and may not all
+be followed perfectly all the time. Here are a few of those principles:
+
+* **Document first** - When deciding whether or not a new feature is needed, first
+  consider whether improving documentation could solve the same problem for others.
+  New features (and especially new APIs) are costly to develop and maintain. Sometimes
+  it's better to show people how to manually do a complex thing via the documentation,
+  rather than extending the API. If new features/API are needed, make sure this avenue
+  has been exhausted first so the decision is intentional.
+* **Standardize developer practices**. We should keep developer/release/community
+  practices consistent across all of the EBP repositories. Where possible, share
+  infrastructure and documentation between them (like this page!). Keep the same
+  level of quality control across all core repositories, regardless of how small
+  they are.
+* **Keep the semantic document model consistent**. There are a few places where
+  markdown syntax / file structure maps on to the structure of a book. The two
+  most obviously places this happens are in the Jupyter Book `_toc.yml` file and in
+  the underlying Sphinx `toctree` structures. These two models should closely resemble
+  one another. Try not to include user-facing structures (e.g., in `_toc.yml` that
+  must be translated to a *different* document structure in Sphinx).
+* **Release early and often**. We should emphasize smaller, more iterative releases
+  over large and complex ones. This keeps our documentation in-line with the latest
+  releases and also minimizes the disruption (and subsequent maintenance burden)
+  associated with big changes. The [process for creating a release](#releases-and-change-logs)
+  is relatively simple and quick, so don't hesitate to release patch versions (or minor
+  versions) as appropriate.
 
 (dev/code_style)=
 
