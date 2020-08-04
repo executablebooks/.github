@@ -24,24 +24,24 @@ Steps to reproduce the behavior:
 
 A clear and concise description of what you expected to happen.
 
-A link to your book's repository.
+A link to your documentation repository.
 
 If relevant, a minimal example of the input text should be supplied,
-together with a screen-shot of the output book document and/or command-line output, e.g.
+together with a screen-shot of the output document and/or command-line output, e.g.
 
 ```markdown
 some text...
 ```
 
 ```console
-$ command
+$ jupyter-book build mybook
 ERROR ...
 ```
 
 **Environment**
 
 - Python Version [e.g. 3.7.1]:
-- Package versions:
+- Package versions or output of `jupyter-book --version`:
 - Operating System:
 
 **Additional context**
