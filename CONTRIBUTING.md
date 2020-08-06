@@ -36,9 +36,9 @@ This project and everyone participating in it is governed by the [EBP Code of Co
 
 ## I don't want to read this whole thing I just have a question!!!
 
-We have started trialing a GitHub discussion board where the community can chime in with helpful advice if you have questions:
+We have started trialing a GitHub discussion board where the community can chime in with helpful advice if you have questions: <https://github.com/executablebooks/meta/discussions>
 
-- https://github.com/executablebooks/meta/discussions
+Additionally, if you would like to see a new feature implemented, see our [Feature Voting page](https://executablebooks.org/en/latest/feature-vote.html).
 
 ## What should I know before I get started?
 
