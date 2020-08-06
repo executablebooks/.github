@@ -325,12 +325,12 @@ There is no need to mention you also added unit tests when adding a new feature.
 Keywords/emojis are adapted from [Emoji-Log](https://github.com/ahmadawais/Emoji-Log) and [gitmoji](https://github.com/carloscuesta/gitmoji) and should be one of the following (brackets contain [GitHub emoji markup](https://gist.github.com/rxaviers/7360908) for reference):
 
 - `‼️ BREAKING:` (`:bangbang:`) — to introduce a back-incompatible change(s) (and/or remove deprecated code).
-- `✨  NEW:` (`:sparkles:`) — to introduce a new feature(s).
+- `✨ NEW:` (`:sparkles:`) — to introduce a new feature(s).
 - `👌 IMPROVE:` (`:ok_hand:`) — to improve an existing code/feature (with no breaking changes).
 - `🐛 FIX:` (`:bug:`) — to fix a code bug.
 - `📚 DOCS:` (`:books:`) — to add new documentation.
-- `✏️ REWRITE:` (`:pencil2:`) — to apply fixes (like correcting typos) to existing documentation.
-- `🧪  TEST:` (`:testube:`) — to add additional testing only.
+- `👀 REVISE:` (`:eyes:`) — to revise minor issues (like typos) which should not appear in a changelog.
+- `🧪 TEST:` (`:testube:`) — to add additional testing only.
 - `🚀 RELEASE:` (`:rocket:`) — to bump the package version for release.
 - `⬆️ UPGRADE:` (`:arrow_up:`) — for upgrading a dependency pinning.
 - `♻️ REFACTOR:` (`:recycle:`) — for refactoring existing code (with no specific improvements).
