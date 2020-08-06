@@ -329,7 +329,7 @@ Keywords/emojis are adapted from [Emoji-Log](https://github.com/ahmadawais/Emoji
 - `👌 IMPROVE:` (`:ok_hand:`) — to improve an existing code/feature (with no breaking changes).
 - `🐛 FIX:` (`:bug:`) — to fix a code bug.
 - `📚 DOCS:` (`:books:`) — to add new documentation.
-- `👀 REVISE:` (`:eyes:`) — to revise minor issues (like typos) which should not appear in a changelog.
+- `🔧 MAINTAIN:` (`:wrench:`) — to make minor changes (like fixing typos) which should not appear in a changelog.
 - `🧪 TEST:` (`:testube:`) — to add additional testing only.
 - `🚀 RELEASE:` (`:rocket:`) — to bump the package version for release.
 - `⬆️ UPGRADE:` (`:arrow_up:`) — for upgrading a dependency pinning.
