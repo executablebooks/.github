@@ -42,6 +42,8 @@ We have started trialing a GitHub discussion board where the community can chime
 
 ## What should I know before I get started?
 
+For EBP's overarching goals and principles, see: <https://executablebooks.org>
+
 EBP is a large open source project; it's made up of numerous packages, in to keep individual components modular and reusable by others.
 When you initially consider contributing to EBP, you might be unsure about which of those repositories implements the functionality you want to change or report a bug for. This section should help you with that.
 
