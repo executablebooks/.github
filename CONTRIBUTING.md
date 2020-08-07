@@ -8,7 +8,12 @@ These are mostly guidelines, not rules. Use your best judgment, and feel free to
 
 Thank you for you interest in contributing ✨
 
-- [Development Conventions](#development-conventions)
+## Table of contents
+
+  - [Code of Conduct](#code-of-conduct)
+  - [I don't want to read this whole thing, I just have a question!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
+  - [What should I know before I get started?](#what-should-i-know-before-i-get-started)
+  - [Coding Style](#coding-style)
   - [Design Philosophy](#design-philosophy)
   - [Coding Style](#coding-style)
   - [Testing](#testing)
@@ -18,23 +23,42 @@ Thank you for you interest in contributing ✨
   - [Pull Request Reviews](#pull-request-reviews)
     - [Sources](#sources)
     - [Standards](#standards)
-      - [Approving changes](#approving-changes)
-      - [Vigilance](#vigilance)
-      - [Communication](#communication)
     - [Check-list - What to look for](#check-list---what-to-look-for)
-      - [Scope](#scope)
-      - [Design](#design)
-      - [Functionality](#functionality)
-      - [Complexity](#complexity)
-      - [Tests](#tests)
-      - [Naming](#naming)
-      - [Comments](#comments)
-      - [Style & Consistency](#style--consistency)
   - [Merging Pull Requests](#merging-pull-requests)
   - [Commit Messages](#commit-messages)
   - [Releases and Change-logs](#releases-and-change-logs)
     - [The process of creating a release](#the-process-of-creating-a-release)
   - [Deprecations](#deprecations)
+
+## Code of Conduct
+
+This project and everyone participating in it is governed by the [EBP Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [executablebooks@gmail.com](mailto:executablebooks@gmail.com).
+
+## I don't want to read this whole thing I just have a question!!!
+
+We have started trialing a GitHub discussion board where the community can chime in with helpful advice if you have questions: <https://github.com/executablebooks/meta/discussions>
+
+Additionally, if you would like to see a new feature implemented, see our [Feature Voting page](https://executablebooks.org/en/latest/feature-vote.html).
+
+## What should I know before I get started?
+
+For EBP's overarching goals and principles, see: <https://executablebooks.org>
+
+EBP is a large open source project; it's made up of numerous packages, in to keep individual components modular and reusable by others.
+When you initially consider contributing to EBP, you might be unsure about which of those repositories implements the functionality you want to change or report a bug for. This section should help you with that.
+
+Here's a list of the big ones:
+
+- [markdown-it-py](https://github.com/executablebooks/markdown-it-py) is our Markdown parser. It is a Python port of the very popular [markdown-it](https://github.com/markdown-it/markdown-it) package, which is CommonMark compliant, fast and extensible.
+- [MyST-Parser](https://github.com/executablebooks/MyST-Parser) is a bridge between markdown-it-py and [sphinx](https://github.com/sphinx-doc/sphinx). It calls markdown-it-py on Markdown files and converts the parsing tokens created to the docutils Abstact Syntax Tree (AST) used internally by sphinx.
+- [MyST-NB](https://github.com/executablebooks/MyST-NB) builds on MyST-Parser to allow parsing and execution of [Jupyter Notebooks](https://jupyter.org/) and their [text-based representation](https://myst-nb.readthedocs.io/en/latest/use/markdown.html).
+- [jupyter-cache](https://github.com/executablebooks/jupyter-cache) is used by MyST-NB to execute notebooks and cache their results, such that they are only re-excuted during documentation builds when code cells change.
+- [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) is a sphinx HTML theme, designed to be optimal for the presentation of executable books.
+- [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton), [sphinx-togglebutton](https://github.com/executablebooks/sphinx-togglebutton), [sphinx-panels](https://github.com/executablebooks/sphinx-panels) and [sphinx-thebe](https://github.com/executablebooks/sphinx-thebe) provide sphinx extensions to allow the inclusion of special features in the documentation.
+- [jupyter-book](https://github.com/executablebooks/jupyter-book) provides a user-friendly interface for building beautiful, publication-quality books and documents, utlising the above components.
+- [myst-language-support](https://github.com/executablebooks/myst-language-support) provides  aTextmate grammar, and VS Code extension, for editing MyST markdown.
+
+Below is documentation of conventions which are applicable to all repositories, but also individual repositories may contain additional contributing guides for that particular code base. 
 
 (dev/design-philosophy)=
 
@@ -44,24 +68,24 @@ There are few high-level principles that this project tries to follow in making
 both technical and community decisions. They goals to shoot for, and may not all
 be followed perfectly all the time. Here are a few of those principles:
 
-* **Document first** - When deciding whether or not a new feature is needed, first
+- **Document first** - When deciding whether or not a new feature is needed, first
   consider whether improving documentation could solve the same problem for others.
   New features (and especially new APIs) are costly to develop and maintain. Sometimes
   it's better to show people how to manually do a complex thing via the documentation,
   rather than extending the API. If new features/API are needed, make sure this avenue
   has been exhausted first so the decision is intentional.
-* **Standardize developer practices**. We should keep developer/release/community
+- **Standardize developer practices**. We should keep developer/release/community
   practices consistent across all of the EBP repositories. Where possible, share
   infrastructure and documentation between them (like this page!). Keep the same
   level of quality control across all core repositories, regardless of how small
   they are.
-* **Keep the semantic document model consistent**. There are a few places where
+- **Keep the semantic document model consistent**. There are a few places where
   markdown syntax / file structure maps on to the structure of a book. The two
   most obviously places this happens are in the Jupyter Book `_toc.yml` file and in
   the underlying Sphinx `toctree` structures. These two models should closely resemble
   one another. Try not to include user-facing structures (e.g., in `_toc.yml` that
   must be translated to a *different* document structure in Sphinx).
-* **Release early and often**. We should emphasize smaller, more iterative releases
+- **Release early and often**. We should emphasize smaller, more iterative releases
   over large and complex ones. This keeps our documentation in-line with the latest
   releases and also minimizes the disruption (and subsequent maintenance burden)
   associated with big changes. The [process for creating a release](#releases-and-change-logs)
