@@ -16,6 +16,7 @@ Thank you for you interest in contributing ✨
   - [Coding Style](#coding-style)
   - [Design Philosophy](#design-philosophy)
   - [Coding Style](#coding-style)
+  - [Naming Conventions](#naming-conventions)
   - [Testing](#testing)
   - [Documentation](#documentation)
   - [Git Branches](#git-branches)
@@ -98,6 +99,28 @@ be followed perfectly all the time. Here are a few of those principles:
 
 Coding style is largely enforced automatically, using [pre-commit hooks](https://pre-commit.com/).
 For Python packages, the pre-commit should include automated code formatting *via* [Black](https://black.readthedocs.io/) and code linting *via* [flake8](https://flake8.pycqa.org).
+
+(dev/naming_conventions)
+
+## Naming Conventions
+
+The following naming conventions should be used
+
+**Directives:**
+
+Directives should have names that:
+
+1. Short, concise and descriptive
+2. Use '-' to join words together
+
+For example a directive for evaluating `rst` syntax might be named `eval-rst` which would be used in
+a document using the [directive syntax](https://myst-parser.readthedocs.io/en/latest/using/syntax.html#directives-a-block-level-extension-point).
+
+````
+```{eval-rst}
+<rst>
+```
+````
 
 (dev/testing)=
 
