@@ -108,7 +108,7 @@ The following naming conventions should be used
 
 **Directives:**
 
-Directives should have names that:
+Directives should have names that are:
 
 1. Short, concise and descriptive
 2. Use '-' to join words together
