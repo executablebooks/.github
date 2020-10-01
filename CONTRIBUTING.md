@@ -58,7 +58,7 @@ Here's a list of the big ones:
 - [jupyter-book](https://github.com/executablebooks/jupyter-book) provides a user-friendly interface for building beautiful, publication-quality books and documents, utlising the above components.
 - [myst-language-support](https://github.com/executablebooks/myst-language-support) provides  aTextmate grammar, and VS Code extension, for editing MyST markdown.
 
-Below is documentation of conventions which are applicable to all repositories, but also individual repositories may contain additional contributing guides for that particular code base. 
+Below is documentation of conventions which are applicable to all repositories, but also individual repositories may contain additional contributing guides for that particular code base.
 
 (dev/design-philosophy)=
 
@@ -173,7 +173,7 @@ In addition, when writing documentation authors should adhere to the following g
   Use ``#`` instead of ``$`` to indicate a root prompt.
 
 - Python scripts should use `python`
-  
+
   ````md
   ```python
   print("hi")
@@ -181,7 +181,7 @@ In addition, when writing documentation authors should adhere to the following g
   ````
 
 - Python sessions (e.g. *via* `ipython`) should use `ipython`
-  
+
   ````md
   ```ipython
   In  [1]: print("hi")
@@ -274,7 +274,7 @@ When your pull request is "Ready for Review", you can select this option on the 
 
 - Are you being asked to review more than 200 lines of code?
    Then don't be shy to ask the submitter to split the PR - review effectiveness [drops substantially beyond 200 lines of code][cisco-study].
-- Are there parts of the codebase that have not been modified, but *should* be adapted to the changes?  
+- Are there parts of the codebase that have not been modified, but *should* be adapted to the changes?
    Does the code change require an update of the documentation?
 
 #### Design
@@ -376,7 +376,7 @@ Keywords/emojis are adapted from [Emoji-Log](https://github.com/ahmadawais/Emoji
 - `🐛 FIX:` (`:bug:`) — to fix a code bug.
 - `📚 DOCS:` (`:books:`) — to add new documentation.
 - `🔧 MAINTAIN:` (`:wrench:`) — to make minor changes (like fixing typos) which should not appear in a changelog.
-- `🧪 TEST:` (`:testube:`) — to add additional testing only.
+- `🧪 TEST:` (`:test_tube:`) — to add additional testing only.
 - `🚀 RELEASE:` (`:rocket:`) — to bump the package version for release.
 - `⬆️ UPGRADE:` (`:arrow_up:`) — for upgrading a dependency pinning.
 - `♻️ REFACTOR:` (`:recycle:`) — for refactoring existing code (with no specific improvements).
