@@ -4,15 +4,18 @@ Welcome to the Executable Book Project (EBP)!
 We're excited you're here and want to contribute 🎉.
 
 This page outlines conventions and best practices for development and maintenance across all repositories in the EBP organisation, to help the community make the best tools possible.
-These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+
+>  **These are guidelines, not rules** 💡
+>
+> This page is meant to help you make your contribution as efficient and helpful as possible, not to lay down strict rules that must be followed at all times. We think these are reasonable patterns to follow, and the EBP tries to follow them as much as it can. But if you prefer to do things otherwise, that is usually just fine 👍.
 
 Thank you for you interest in contributing ✨
 
 ## Table of contents
 
   - [Code of Conduct](#code-of-conduct)
-  - [I don't want to read this whole thing, I just have a question!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
-  - [What should I know before I get started?](#what-should-i-know-before-i-get-started)
+  - [Questions or Feedback](#questions-or-feedback)
+  - [Structure of EBP Repositories](#structure-of-ebp-repositories)
   - [Design Philosophy](#design-philosophy)
   - [Coding Style](#coding-style)
   - [Naming Conventions](#naming-conventions)
@@ -34,13 +37,13 @@ Thank you for you interest in contributing ✨
 
 This project and everyone participating in it is governed by the [EBP Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [executablebooks@gmail.com](mailto:executablebooks@gmail.com).
 
-## I don't want to read this whole thing I just have a question!!!
+## Questions or feedback
 
-We have started trialing a GitHub discussion board where the community can chime in with helpful advice if you have questions: <https://github.com/executablebooks/meta/discussions>
+The Executable Books Project uses [a GitHub discussion board](https://github.com/executablebooks/meta/discussions) for community questions, discussion, and assistance. Please join in here: <https://github.com/executablebooks/meta/discussions>
 
 Additionally, if you would like to see a new feature implemented, see our [Feature Voting page](https://executablebooks.org/en/latest/feature-vote.html).
 
-## What should I know before I get started?
+## Structure of EBP repositories
 
 For EBP's overarching goals and principles, see: <https://executablebooks.org>
 
@@ -99,7 +102,7 @@ be followed perfectly all the time. Here are a few of those principles:
 Coding style is largely enforced automatically, using [pre-commit hooks](https://pre-commit.com/).
 For Python packages, the pre-commit should include automated code formatting *via* [Black](https://black.readthedocs.io/) and code linting *via* [flake8](https://flake8.pycqa.org).
 
-(dev/naming_conventions)
+(dev/naming_conventions)=
 
 ## Naming Conventions
 
@@ -201,11 +204,6 @@ Additions to the `master` branch should follow these simple concepts:
 - Use feature branches for all new features and bug fixes.
 - Merge feature branches into the master branch using pull requests.
 - Keep a high quality, up-to-date master branch.
-
-It is also advised to name branches by the convention:
-
-- fix/\<issue number\>/\<description\>, e.g. `fix/123/func-error`
-- feature/\<description\>, e.g. `feature/new-options`
 
 (dev/pr_open)=
 
@@ -316,27 +314,28 @@ Do they make simple and useful assertions?
 
 ## Merging Pull Requests
 
-A pull request
-
-- Should be opened only once you consider it ready for review.
-   Each time you push a commit to a branch with an open PR, it triggers a CI build, eating up the quota of the organization.
-- Can consist of one or multiple commits.
-   Before you open a PR, make sure to clean up your commit history and create the commits that you think best divide up the total work as outlined above (use `git rebase` and `git commit --amend`).
+A pull request should be opened only once you consider it ready for review.
+Each time you push a commit to a branch with an open PR, it triggers a CI build, eating up the quota of the organization.
 
 There are three ways of 'merging' pull requests on GitHub.
 **Squash and merge** is the favoured method, applicable to the majority of PRs, but there are some use cases where the other two apply:
 
 - **Squash and merge**: take all commits, squash them into a single one and put it on top of the base branch.
   - Choose this by default for pull requests that address a single issue and are well represented by a single commit.
-  - Make sure to clean the commit message (title & body)
+  - The person merging the PR should choose a [clear commit message](dev/commits) when merging (via the GitHub UI)
 - **Rebase and merge**: take all commits and 'recreate' them on top of the base branch. All commits will be recreated with new hashes.
   - Choose this for pull requests that require more than a single commit.
+  - Make sure [the commits have clear commit messages](dev/commits).
   - Examples: PRs that contain multiple commits with individually significant changes; PRs that have commits from different authors (squashing commits would remove attribution)
 - **Merge with merge commit**: put all commits as they are on the base branch, with a merge commit on top
   - Choose for collaborative PRs with many commits.
      Here, the merge commit provides actual benefits.
 
-For the latter two, it is recommend that the merger do (if it is their PR) or at ask the contributor to perform an [interactive rebase]( https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history). At this point you can squash consecutive commits together (using "fixup") and also rewrite commit messages (using "reword") to create a compliant history.
+One drawback of squash-merging is that it combines multiple commits into a single one. This is usually fine, as PRs have many commits like "fixing typo", and "addressing comments". Squashing these into one message allows the PR merger to create [a commit message that is clear and concise](dev/commits). However, sometimes a PR is best-represented by *multiple* commits. In this case, it's fine to rebase-merge or merge-commit.
+
+> **How can I rename my commits locally?**
+>
+> If you'd like to rename commits locally (e.g., if you'd like to make a rebase-commit in GitHub, but wish to clean up the commit history first to use [commit messages that are clear and concise](dev/commits)), you can try an [**interactive rebase**]( https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history). This allows you to convert a series of commits into a smaller number of commits, and you can choose the commit message for each one. However, this is an advanced git technique so only do this if you know what you're doing! If you just want to merge in your commits without interactively rebasing, it is not the end of the world.
 
 (dev/commits)=
 
