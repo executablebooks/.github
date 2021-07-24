@@ -1,0 +1,27 @@
+name: Request a documentation improvement 📚
+description: Provide suggestions for how our documentation could be more clear, discoverable, and complete.
+labels: documentation
+body:
+- type: input
+  id: example-link
+  attributes:
+    label: Link to the documentation you'd like to improve
+    description: |
+      Provide a URL so that others can understand where the documentation can be enhanced.
+    placeholder: |
+      https://jupyterbook.org/a/page/to/improve.html
+  validations:
+    required: true
+
+- type: textarea
+  id: problem
+  attributes:
+    label: What to improve
+    description: |
+      What is the improvement that could be made to the documentation? If this fixes a specific problem, what is the problem?
+    placeholder: |
+      I think it would be easier to understand if...
+      I noticed a typo on the page...
+      Feature XXX isn't documented...
+  validations:
+    required: false
