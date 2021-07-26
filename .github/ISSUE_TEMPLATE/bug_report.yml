@@ -2,42 +2,28 @@ name: Report a problem 🐛
 description: Problem reports are for when something behaves incorrectly, or differently from how you'd expect.
 labels: bug
 body:
-- type: markdown
-  attributes:
-    value: |
-      # Describe the problem
-
 - type: textarea
   id: describe
   attributes:
     label: Describe the problem
     description: |
       Provide a short description (one or two sentences) about the problem. What did you expect to happen, and what is actually happening?
+
+      If possible, provide screenshots or error messages that you've encountered.
     placeholder: |
       The behavior of XXX doesn't work as expected. When I do YYY, I expected ZZZ to occur, but instead WWW happens.
-  validations:
-    required: true
 
-- type: textarea
-  id: expected
-  attributes:
-    label: Steps to reproduce.
-    description: |
-      Provide information that others may use to re-produce this behavior. Provide this in a step-by-step manner so that others can follow along.
-    placeholder: |
-      A clear and concise description of what you expected to happen.
-
-      If relevant, a minimal example of the input text should be supplied,
-      together with a screen-shot of the output document and/or command-line output, e.g.
-
-      ```markdown
-      some text...
-      ```
+      Here's an error message I ran into...
 
       ```console
       $ jupyter-book build mybook
       ERROR ...
       ```
+
+      Here's a screenshot of the problem...
+
+      ![](drag-and-drop-screenshot-image)
+
   validations:
     required: true
 
@@ -51,11 +37,6 @@ body:
       https://mybook.org/a/page/with/problems.html
   validations:
     required: false
-
-- type: markdown
-  attributes:
-    value: |
-      # Reproduce the problem
 
 - type: textarea
   id: reproduce
