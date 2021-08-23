@@ -10,8 +10,9 @@ body:
       Describe the enhancement you'd like to see. Provide as much context as possible and link to related issues and/or pull requests. Include screenshots if there is prior art you'd like to refer to.
       This section should contain "what" you are proposing.
     placeholder: |
-      I wish I were able to...
-      XXX feature would be better if it would...
+      - I wish I were able to...
+      - It would be useful if XXX behaved in YYY way...
+      - XXX feature would be better if it would...
   validations:
     required: true
 
@@ -26,7 +27,7 @@ body:
     placeholder: |
       - This would facilitate XXX which is a common use-case
       - It's really annoying when XXX and this would fix it
-      - This problem affects anybody that does XXX
+      - This would make it possible to XXX which YYY people care about.
 
   validations:
     required: true
