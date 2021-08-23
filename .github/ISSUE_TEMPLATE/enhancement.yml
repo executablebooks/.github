@@ -5,9 +5,10 @@ body:
 - type: textarea
   id: describe
   attributes:
-    label: Describe the enhancement you'd like
+    label: Description / Summary
     description: |
-      Provide a clear and concise description of what you'd like to change, add, or improve.
+      Describe the enhancement you'd like to see. Provide as much context as possible and link to related issues and/or pull requests. Include screenshots if there is prior art you'd like to refer to.
+      This section should contain "what" you are proposing.
     placeholder: |
       I wish I were able to...
       XXX feature would be better if it would...
@@ -15,34 +16,53 @@ body:
     required: true
 
 - type: textarea
-  id: problem
+  id: value
   attributes:
-    label: Does this solve a specific problem?
+    label: Value / benefit
     description: |
-      Is your feature request related to a problem? Please describe.
+      What is the value in resolving this issue, and who will benefit from it?
+      Include any information that could help us prioritize the enhancement.
+
     placeholder: |
-      I'm always frustrated when XXX, this enhancement would YYY...
-      I reported bug XXX, this enhancement would fix it...
+      - This would facilitate XXX which is a common use-case
+      - It's really annoying when XXX and this would fix it
+      - This problem affects anybody that does XXX
+
+  validations:
+    required: true
+
+- type: textarea
+  id: implementation
+  attributes:
+    label: Implementation details
+    description: |
+      Anything that will help others understand how this issue could be addressed. Where appropriate, note locations in a codebase where a change would need to be made, or other considerations that should be taken.
+      This section should contain "how" this issue should be resolved.
+
+      _If you can't think of anything then just leave this blank and we can fill it in later! This can be filled in as we understand more about an issue._
+
+    placeholder: |
+      - This change would be probably need to be over here...
+      - The best way to do this would be...
+      - There are a few ways to do this, we should choose between...
+
   validations:
     required: false
 
-- type: textarea
-  id: alternatives
-  attributes:
-    label: What alternatives exist?
-    description: |
-      Are there any alternative solutions or ways to accomplish what you'd like? Are there other tools that behave similarly?
-    placeholder: |
-      Another way to solve my problem would be to...
-      Another tool that already does this is...
-  validations:
-    required: false
 
 - type: textarea
-  id: context
+  id: tasks
   attributes:
-    label: Additional context
+    label: Tasks to complete
     description: |
-      Any additional context or screenshots needed to help understand, decide, or implement this enhancement.
+      Any concrete tasks that should be completed to resolve this issue.
+      The more specific the better.
+
+      _If you can't think of anything then just leave this blank and we can fill it in later! This can be filled in as we understand more about an issue._
+
+    placeholder: |
+      - [ ] Discuss and decide on what to do...
+      - [ ] Implement partial feature A...
+
   validations:
     required: false
