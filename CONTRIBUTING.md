@@ -17,6 +17,7 @@ Thank you for you interest in contributing ✨
   - [Questions or Feedback](#questions-or-feedback)
   - [Structure of EBP Repositories](#structure-of-ebp-repositories)
   - [Design Philosophy](#design-philosophy)
+  - [Pre-commit Hooks](#pre-commit-hooks)
   - [Coding Style](#coding-style)
   - [Naming Conventions](#naming-conventions)
   - [Testing](#testing)
@@ -136,6 +137,9 @@ pre-commit run
 In addition to using `pre-commit` at the command line, we also [use a `pre-commit` CI/CD service](https://pre-commit.ci/) in most of our repositories.
 This will check any new Pull Request to make sure it passes the pre-commit checks.
 If not, it will **automatically** make a commit to that PR to ensure that it passes the pre-commit checks.
+
+Periodically, the CI/CD workflow will automatically upgrade our pre-commit dependencies in `.pre-commit-config.yaml`, and make the needed changes to our repository to make tests pass.
+In general, we should accept these PRs as-is and merge them in quickly so that we are not out of date with our pre-commit dependencies.
 
 ### To run pre-commit for all files at once
 
