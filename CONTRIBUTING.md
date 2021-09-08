@@ -17,6 +17,7 @@ Thank you for you interest in contributing ✨
   - [Questions or Feedback](#questions-or-feedback)
   - [Structure of EBP Repositories](#structure-of-ebp-repositories)
   - [Design Philosophy](#design-philosophy)
+  - [Pre-commit Hooks](#pre-commit-hooks)
   - [Coding Style](#coding-style)
   - [Naming Conventions](#naming-conventions)
   - [Testing](#testing)
@@ -101,6 +102,53 @@ be followed perfectly all the time. Here are a few of those principles:
 
 Coding style is largely enforced automatically, using [pre-commit hooks](https://pre-commit.com/).
 For Python packages, the pre-commit should include automated code formatting *via* [Black](https://black.readthedocs.io/) and code linting *via* [flake8](https://flake8.pycqa.org).
+
+(dev/pre_commit)=
+## Pre-commit hooks
+
+We use [pre-commit](https://pre-commit.com/) to ensure that our code meets various standards and best-practices.
+Pre-commit is a tool that will run checks against a codebase **every time a commit is made**.
+If any of those checks fail, then it will update the codebase so that it passes, and ask you to make your commit again.
+
+Many of our repositories have a **configuration file** called `.pre-commit-config.yaml`.
+This contains all of the instructions and extensions to use with pre-commit.
+
+To get started with `pre-commit`, follow these steps:
+
+- **Install `pre-commit`**. To do so, follow [the `pre-commit` installation instructions](https://pre-commit.com/#install).
+- **Activate `pre-commit` in the repository**. To active pre-commit, run the following command:
+
+  ```bash
+  pre-commit install
+  ```
+
+  This will check the `.pre-commit-config.yaml` file and install the needed dependencies for this repository.
+
+That's it! Any time you make a commit, `pre-commit` should now run a check against all changed files.
+
+You may also manually run it with the following command:
+
+```bash
+pre-commit run
+```
+
+### pre-commit in our CI/CD workflow
+
+In addition to using `pre-commit` at the command line, we also [use a `pre-commit` CI/CD service](https://pre-commit.ci/) in most of our repositories.
+This will check any new Pull Request to make sure it passes the pre-commit checks.
+If not, it will **automatically** make a commit to that PR to ensure that it passes the pre-commit checks.
+
+Periodically, the CI/CD workflow will automatically upgrade our pre-commit dependencies in `.pre-commit-config.yaml`, and make the needed changes to our repository to make tests pass.
+In general, we should accept these PRs as-is and merge them in quickly so that we are not out of date with our pre-commit dependencies.
+
+### To run pre-commit for all files at once
+
+By default, pre-commit will only run on the **changed files** in a commit.
+To run it for **all files at once**, use the following command:
+
+```bash
+pre-commit run --all-files
+```
 
 (dev/naming_conventions)=
 
