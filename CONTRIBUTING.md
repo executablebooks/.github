@@ -4,16 +4,20 @@ Welcome to the Executable Book Project (EBP)!
 We're excited you're here and want to contribute 🎉.
 
 This page outlines conventions and best practices for development and maintenance across all repositories in the EBP organisation, to help the community make the best tools possible.
-These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
+
+>  **These are guidelines, not rules** 💡
+>
+> This page is meant to help you make your contribution as efficient and helpful as possible, not to lay down strict rules that must be followed at all times. We think these are reasonable patterns to follow, and the EBP tries to follow them as much as it can. But if you prefer to do things otherwise, that is usually just fine 👍.
 
 Thank you for you interest in contributing ✨
 
 ## Table of contents
 
   - [Code of Conduct](#code-of-conduct)
-  - [I don't want to read this whole thing, I just have a question!](#i-dont-want-to-read-this-whole-thing-i-just-have-a-question)
-  - [What should I know before I get started?](#what-should-i-know-before-i-get-started)
+  - [Questions or Feedback](#questions-or-feedback)
+  - [Structure of EBP Repositories](#structure-of-ebp-repositories)
   - [Design Philosophy](#design-philosophy)
+  - [Pre-commit Hooks](#pre-commit-hooks)
   - [Coding Style](#coding-style)
   - [Naming Conventions](#naming-conventions)
   - [Testing](#testing)
@@ -34,13 +38,13 @@ Thank you for you interest in contributing ✨
 
 This project and everyone participating in it is governed by the [EBP Code of Conduct](https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to [executablebooks@gmail.com](mailto:executablebooks@gmail.com).
 
-## I don't want to read this whole thing I just have a question!!!
+## Questions or feedback
 
-We have started trialing a GitHub discussion board where the community can chime in with helpful advice if you have questions: <https://github.com/executablebooks/meta/discussions>
+The Executable Books Project uses [a GitHub discussion board](https://github.com/executablebooks/meta/discussions) for community questions, discussion, and assistance. Please join in here: <https://github.com/executablebooks/meta/discussions>
 
 Additionally, if you would like to see a new feature implemented, see our [Feature Voting page](https://executablebooks.org/en/latest/feature-vote.html).
 
-## What should I know before I get started?
+## Structure of EBP repositories
 
 For EBP's overarching goals and principles, see: <https://executablebooks.org>
 
@@ -58,7 +62,7 @@ Here's a list of the big ones:
 - [jupyter-book](https://github.com/executablebooks/jupyter-book) provides a user-friendly interface for building beautiful, publication-quality books and documents, utilising the above components.
 - [myst-language-support](https://github.com/executablebooks/myst-language-support) provides a Textmate grammar, and VS Code extension, for editing MyST markdown.
 
-Below is documentation of conventions which are applicable to all repositories, but also individual repositories may contain additional contributing guides for that particular code base. 
+Below is documentation of conventions which are applicable to all repositories, but also individual repositories may contain additional contributing guides for that particular code base.
 
 (dev/design-philosophy)=
 
@@ -98,6 +102,53 @@ be followed perfectly all the time. Here are a few of those principles:
 
 Coding style is largely enforced automatically, using [pre-commit hooks](https://pre-commit.com/).
 For Python packages, the pre-commit should include automated code formatting *via* [Black](https://black.readthedocs.io/) and code linting *via* [flake8](https://flake8.pycqa.org).
+
+(dev/pre_commit)=
+## Pre-commit hooks
+
+We use [pre-commit](https://pre-commit.com/) to ensure that our code meets various standards and best-practices.
+Pre-commit is a tool that will run checks against a codebase **every time a commit is made**.
+If any of those checks fail, then it will update the codebase so that it passes, and ask you to make your commit again.
+
+Many of our repositories have a **configuration file** called `.pre-commit-config.yaml`.
+This contains all of the instructions and extensions to use with pre-commit.
+
+To get started with `pre-commit`, follow these steps:
+
+- **Install `pre-commit`**. To do so, follow [the `pre-commit` installation instructions](https://pre-commit.com/#install).
+- **Activate `pre-commit` in the repository**. To active pre-commit, run the following command:
+
+  ```bash
+  pre-commit install
+  ```
+
+  This will check the `.pre-commit-config.yaml` file and install the needed dependencies for this repository.
+
+That's it! Any time you make a commit, `pre-commit` should now run a check against all changed files.
+
+You may also manually run it with the following command:
+
+```bash
+pre-commit run
+```
+
+### pre-commit in our CI/CD workflow
+
+In addition to using `pre-commit` at the command line, we also [use a `pre-commit` CI/CD service](https://pre-commit.ci/) in most of our repositories.
+This will check any new Pull Request to make sure it passes the pre-commit checks.
+If not, it will **automatically** make a commit to that PR to ensure that it passes the pre-commit checks.
+
+Periodically, the CI/CD workflow will automatically upgrade our pre-commit dependencies in `.pre-commit-config.yaml`, and make the needed changes to our repository to make tests pass.
+In general, we should accept these PRs as-is and merge them in quickly so that we are not out of date with our pre-commit dependencies.
+
+### To run pre-commit for all files at once
+
+By default, pre-commit will only run on the **changed files** in a commit.
+To run it for **all files at once**, use the following command:
+
+```bash
+pre-commit run --all-files
+```
 
 (dev/naming_conventions)=
 
@@ -173,7 +224,7 @@ In addition, when writing documentation authors should adhere to the following g
   Use ``#`` instead of ``$`` to indicate a root prompt.
 
 - Python scripts should use `python`
-  
+
   ````md
   ```python
   print("hi")
@@ -181,7 +232,7 @@ In addition, when writing documentation authors should adhere to the following g
   ````
 
 - Python sessions (e.g. *via* `ipython`) should use `ipython`
-  
+
   ````md
   ```ipython
   In  [1]: print("hi")
@@ -201,11 +252,6 @@ Additions to the `master` branch should follow these simple concepts:
 - Use feature branches for all new features and bug fixes.
 - Merge feature branches into the master branch using pull requests.
 - Keep a high quality, up-to-date master branch.
-
-It is also advised to name branches by the convention:
-
-- fix/\<issue number\>/\<description\>, e.g. `fix/123/func-error`
-- feature/\<description\>, e.g. `feature/new-options`
 
 (dev/pr_open)=
 
@@ -274,7 +320,7 @@ When your pull request is "Ready for Review", you can select this option on the 
 
 - Are you being asked to review more than 200 lines of code?
    Then don't be shy to ask the submitter to split the PR - review effectiveness [drops substantially beyond 200 lines of code][cisco-study].
-- Are there parts of the codebase that have not been modified, but *should* be adapted to the changes?  
+- Are there parts of the codebase that have not been modified, but *should* be adapted to the changes?
    Does the code change require an update of the documentation?
 
 #### Design
@@ -316,27 +362,30 @@ Do they make simple and useful assertions?
 
 ## Merging Pull Requests
 
-A pull request
-
-- Should be opened only once you consider it ready for review.
-   Each time you push a commit to a branch with an open PR, it triggers a CI build, eating up the quota of the organization.
-- Can consist of one or multiple commits.
-   Before you open a PR, make sure to clean up your commit history and create the commits that you think best divide up the total work as outlined above (use `git rebase` and `git commit --amend`).
+A pull request should be opened only once you consider it ready for review.
+Each time you push a commit to a branch with an open PR, it triggers a CI build, eating up the quota of the organization.
 
 There are three ways of 'merging' pull requests on GitHub.
 **Squash and merge** is the favoured method, applicable to the majority of PRs, but there are some use cases where the other two apply:
 
 - **Squash and merge**: take all commits, squash them into a single one and put it on top of the base branch.
   - Choose this by default for pull requests that address a single issue and are well represented by a single commit.
-  - Make sure to clean the commit message (title & body)
+  - The person merging the PR should choose a [clear commit message](dev/commits) when merging (via the GitHub UI)
 - **Rebase and merge**: take all commits and 'recreate' them on top of the base branch. All commits will be recreated with new hashes.
   - Choose this for pull requests that require more than a single commit.
+  - Make sure [the commits have clear commit messages](dev/commits).
   - Examples: PRs that contain multiple commits with individually significant changes; PRs that have commits from different authors (squashing commits would remove attribution)
 - **Merge with merge commit**: put all commits as they are on the base branch, with a merge commit on top
   - Choose for collaborative PRs with many commits.
      Here, the merge commit provides actual benefits.
 
-For the latter two, it is recommend that the merger do (if it is their PR) or ask the contributor to perform an [interactive rebase]( https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history). At this point you can squash consecutive commits together (using "fixup") and also rewrite commit messages (using "reword") to create a compliant history.
+One drawback of squash-merging is that it combines multiple commits into a single one. This is usually fine, as PRs have many commits like "fixing typo", and "addressing comments". Squashing these into one message allows the PR merger to create [a commit message that is clear and concise](dev/commits). However, sometimes a PR is best-represented by *multiple* commits. In this case, it's fine to rebase-merge or merge-commit.
+
+> **How can I rename my commits locally?**
+>
+> If you'd like to rename commits locally (e.g., if you'd like to make a rebase-commit in GitHub, but wish to clean up the commit history first to use [commit messages that are clear and concise](dev/commits)), you can try an [**interactive rebase**]( https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history).
+> This allows you to convert a series of commits into a smaller number of commits, and you can choose the commit message for each one.
+> However, this is an advanced git technique so only do this if you know what you're doing! If you just want to merge in your commits without interactively rebasing, it is not the end of the world.
 
 (dev/commits)=
 
@@ -376,7 +425,7 @@ Keywords/emojis are adapted from [Emoji-Log](https://github.com/ahmadawais/Emoji
 - `🐛 FIX:` (`:bug:`) — to fix a code bug.
 - `📚 DOCS:` (`:books:`) — to add new documentation.
 - `🔧 MAINTAIN:` (`:wrench:`) — to make minor changes (like fixing typos) which should not appear in a changelog.
-- `🧪 TEST:` (`:testube:`) — to add additional testing only.
+- `🧪 TEST:` (`:test_tube:`) — to add additional testing only.
 - `🚀 RELEASE:` (`:rocket:`) — to bump the package version for release.
 - `⬆️ UPGRADE:` (`:arrow_up:`) — for upgrading a dependency pinning.
 - `♻️ REFACTOR:` (`:recycle:`) — for refactoring existing code (with no specific improvements).

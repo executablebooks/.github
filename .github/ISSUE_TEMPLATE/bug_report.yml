@@ -1,0 +1,102 @@
+name: Report a problem 🐛
+description: Problem reports are for when something behaves incorrectly, or differently from how you'd expect.
+labels: bug
+body:
+- type: textarea
+  id: describe
+  attributes:
+    label: Describe the problem
+    description: |
+      Provide a short description (one or two sentences) about the problem. What did you expect to happen, and what is actually happening?
+
+      If possible, provide screenshots or error messages that you've encountered.
+    placeholder: |
+      The behavior of XXX doesn't work as expected. When I do YYY, I expected ZZZ to occur, but instead WWW happens.
+
+      Here's an error message I ran into...
+
+      ```console
+      $ jupyter-book build mybook
+      ERROR ...
+      ```
+
+      Here's a screenshot of the problem...
+
+      ![](drag-and-drop-screenshot-image)
+
+  validations:
+    required: true
+
+- type: input
+  id: example-link
+  attributes:
+    label: Link to your repository or website
+    description: |
+      If possible, provide a link to your repository or an online place where others can observe this problem.
+    placeholder: |
+      https://mybook.org/a/page/with/problems.html
+  validations:
+    required: false
+
+- type: textarea
+  id: reproduce
+  attributes:
+    label: Steps to reproduce
+    description: |
+      Provide information that others may use to re-produce this behavior. Provide this in a step-by-step manner so that others can follow along.
+    placeholder: |
+      1. Go to '...'
+      2. Click on '....'
+      3. Scroll down to '....'
+      4. See error
+  validations:
+    required: true
+
+- type: input
+  id: python-version
+  attributes:
+    label: The version of Python you're using
+  validations:
+    required: false
+- type: input
+  id: operating-system
+  attributes:
+    label: Your operating system
+  validations:
+    required: false
+- type: textarea
+  id: package-versions
+  attributes:
+    label: Versions of your packages
+    description: |
+      List versions of the relevant packages in your environment needed to reproduce the error.
+      
+      **If you're using Jupyter Book**, paste the output of
+      
+      ```bash
+      jupyter-book --version
+      ```
+
+      **If you're using another tool**, paste the versions of any relevant packages for this error.
+    placeholder: |
+      ```
+      ❯ jupyter-book --version
+        Jupyter Book      : 0.11.2
+        External ToC      : 0.2.2
+        MyST-Parser       : 0.13.7
+        MyST-NB           : 0.12.3
+        Sphinx Book Theme : 0.1.0
+        Jupyter-Cache     : 0.4.2
+        NbClient          : 0.5.3
+      ```
+  validations:
+    required: false
+
+- type: textarea
+  id: context
+  attributes:
+    label: Additional context
+    description: |
+      Any additional context needed to help reproduce, understand, and resolve this issue.
+  validations:
+    required: false
