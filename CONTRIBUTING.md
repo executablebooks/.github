@@ -48,19 +48,19 @@ Additionally, if you would like to see a new feature implemented, see our [Featu
 
 For EBP's overarching goals and principles, see: <https://executablebooks.org>
 
-EBP is a large open source project; it's made up of numerous packages, in to keep individual components modular and reusable by others.
+EBP is a large open source project; it's made up of numerous packages, in order to keep individual components modular and reusable by others.
 When you initially consider contributing to EBP, you might be unsure about which of those repositories implements the functionality you want to change or report a bug for. This section should help you with that.
 
 Here's a list of the big ones:
 
 - [markdown-it-py](https://github.com/executablebooks/markdown-it-py) is our Markdown parser. It is a Python port of the very popular [markdown-it](https://github.com/markdown-it/markdown-it) package, which is CommonMark compliant, fast and extensible.
-- [MyST-Parser](https://github.com/executablebooks/MyST-Parser) is a bridge between markdown-it-py and [sphinx](https://github.com/sphinx-doc/sphinx). It calls markdown-it-py on Markdown files and converts the parsing tokens created to the docutils Abstact Syntax Tree (AST) used internally by sphinx.
+- [MyST-Parser](https://github.com/executablebooks/MyST-Parser) is a bridge between markdown-it-py and [Sphinx](https://github.com/sphinx-doc/sphinx). It calls markdown-it-py on Markdown files and converts the parsing tokens created to the docutils Abstact Syntax Tree (AST) used internally by Sphinx.
 - [MyST-NB](https://github.com/executablebooks/MyST-NB) builds on MyST-Parser to allow parsing and execution of [Jupyter Notebooks](https://jupyter.org/) and their [text-based representation](https://myst-nb.readthedocs.io/en/latest/use/markdown.html).
 - [jupyter-cache](https://github.com/executablebooks/jupyter-cache) is used by MyST-NB to execute notebooks and cache their results, such that they are only re-excuted during documentation builds when code cells change.
-- [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) is a sphinx HTML theme, designed to be optimal for the presentation of executable books.
+- [sphinx-book-theme](https://github.com/executablebooks/sphinx-book-theme) is a Sphinx HTML theme, designed to be optimal for the presentation of executable books.
 - [sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton), [sphinx-togglebutton](https://github.com/executablebooks/sphinx-togglebutton), [sphinx-panels](https://github.com/executablebooks/sphinx-panels) and [sphinx-thebe](https://github.com/executablebooks/sphinx-thebe) provide sphinx extensions to allow the inclusion of special features in the documentation.
-- [jupyter-book](https://github.com/executablebooks/jupyter-book) provides a user-friendly interface for building beautiful, publication-quality books and documents, utlising the above components.
-- [myst-language-support](https://github.com/executablebooks/myst-language-support) provides  aTextmate grammar, and VS Code extension, for editing MyST markdown.
+- [jupyter-book](https://github.com/executablebooks/jupyter-book) provides a user-friendly interface for building beautiful, publication-quality books and documents, utilising the above components.
+- [myst-language-support](https://github.com/executablebooks/myst-language-support) provides a Textmate grammar, and VS Code extension, for editing MyST markdown.
 
 Below is documentation of conventions which are applicable to all repositories, but also individual repositories may contain additional contributing guides for that particular code base.
 
@@ -69,7 +69,7 @@ Below is documentation of conventions which are applicable to all repositories, 
 ## Design Philosophy
 
 There are few high-level principles that this project tries to follow in making
-both technical and community decisions. They goals to shoot for, and may not all
+both technical and community decisions. They are goals to shoot for, and may not all
 be followed perfectly all the time. Here are a few of those principles:
 
 - **Document first** - When deciding whether or not a new feature is needed, first
@@ -383,7 +383,9 @@ One drawback of squash-merging is that it combines multiple commits into a singl
 
 > **How can I rename my commits locally?**
 >
-> If you'd like to rename commits locally (e.g., if you'd like to make a rebase-commit in GitHub, but wish to clean up the commit history first to use [commit messages that are clear and concise](dev/commits)), you can try an [**interactive rebase**]( https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history). This allows you to convert a series of commits into a smaller number of commits, and you can choose the commit message for each one. However, this is an advanced git technique so only do this if you know what you're doing! If you just want to merge in your commits without interactively rebasing, it is not the end of the world.
+> If you'd like to rename commits locally (e.g., if you'd like to make a rebase-commit in GitHub, but wish to clean up the commit history first to use [commit messages that are clear and concise](dev/commits)), you can try an [**interactive rebase**]( https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history).
+> This allows you to convert a series of commits into a smaller number of commits, and you can choose the commit message for each one.
+> However, this is an advanced git technique so only do this if you know what you're doing! If you just want to merge in your commits without interactively rebasing, it is not the end of the world.
 
 (dev/commits)=
 
@@ -440,7 +442,7 @@ This list is loosely in order of priority, e.g. a commit that is both a bug fix 
 Releases should be made *via* [GitHub Releases](https://docs.github.com/en/github/administering-a-repository/managing-releases-in-a-repository), from the `master` branch and using [semantic versioning](https://semver.org/) for tags, e.g. `v1.2.1`, **for versions above 1.0.0**.
 For versions below 1.0.0, it is understood that breaking changes are more frequent (i.e. the repo is in beta), and so semantic versioning is relaxed such that MINOR version changes also signify backward incompatible releases.
 
-The change-log should be easy for users and developers to understand the key changes (as [discussed here](https://keepachangelog.com/)), and should mirror the commits categories described above, with the following format:
+The changelog should be easy for users and developers to understand the key changes (as [discussed here](https://keepachangelog.com/)), and should mirror the commits categories described above, with the following format:
 
 ```md
 ## 1.1.0 - 2020-06-25
