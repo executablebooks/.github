@@ -18,6 +18,7 @@ Thank you for you interest in contributing ✨
   - [Structure of EBP Repositories](#structure-of-ebp-repositories)
   - [Design Philosophy](#design-philosophy)
   - [Coding Style](#coding-style)
+  - [Supported Versions](#supported-versions)
   - [Naming Conventions](#naming-conventions)
   - [Testing](#testing)
   - [Documentation](#documentation)
@@ -101,6 +102,33 @@ be followed perfectly all the time. Here are a few of those principles:
 
 Coding style is largely enforced automatically, using [pre-commit hooks](https://pre-commit.com/).
 For Python packages, the pre-commit should include automated code formatting *via* [Black](https://black.readthedocs.io/) and code linting *via* [flake8](https://flake8.pycqa.org).
+
+(dev/supported_versions)=
+## Supported Versions
+
+Below are guidelines for the versions we support for a few key dependencies across our projects.
+
+### General strategy
+
+We want to follow these principles in deciding which versions to support, and how to test against them:
+
+- Support any major versions that are realistically used by a significant number of users.
+- Avoid ballooning our test matrices so that CI/CD becomes cumbersome for development.
+- Allow ourselves at least 6 months of buffer to support new versions after they are released.
+
+### Python
+
+We support **all `3.X` releases that Python also supports**.
+We follow the [Python End of Life dates](https://devguide.python.org/#status-of-python-branches) to determine which versions versions this means.
+
+Our test suites should test against the following Python versions:
+
+- The oldest supported version
+- The latest two versions older than 6 months
+
+### Sphinx
+
+We support and test the **latest two major-version releases of Sphinx** that are older than 6 months.
 
 (dev/naming_conventions)=
 
