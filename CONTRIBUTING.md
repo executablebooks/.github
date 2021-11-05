@@ -116,6 +116,9 @@ We want to follow these principles in deciding which versions to support, and ho
 - Support any major versions that are realistically used by a significant number of users.
 - Avoid ballooning our test matrices so that CI/CD becomes cumbersome for development.
 - Allow ourselves at least 6 months of buffer to support new versions after they are released.
+- When a new version is released, create a pull request that adds the version to our test matrix, to identify which tests will fail.
+  Over the next 6 months, periodically update the branch from `main` and see if changes have fixed the tests.
+  When they all pass, merge the PR.
 
 ### Python
 
