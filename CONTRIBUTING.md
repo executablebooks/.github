@@ -276,7 +276,7 @@ In addition, when writing documentation authors should adhere to the following g
 ## Git Branches
 
 Repositories should use the `master` branch as their primary branch.
-This branch should be "protected" on GitHub and require PR reviews and status checks before merging (see [GitHub branch configuration](https://docs.github.com/en/github/administering-a-repository/configuring-protected-branches)).
+This branch should be "protected" on GitHub and require PR reviews and status checks before merging (see [GitHub branch configuration](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/defining-the-mergeability-of-pull-requests/managing-a-branch-protection-rule)).
 
 Additions to the `master` branch should follow these simple concepts:
 
