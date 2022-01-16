@@ -1,51 +1,52 @@
+# Inspired by
+# - https://www.backhub.co/blog/best-practices-for-using-github-issues
+# - https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f
+# - https://wiredcraft.com/blog/how-we-write-our-github-issues/
 name: Request an enhancement 💡
 description: Suggest an idea for this project
-labels: enhancement
+labels: [enhancement]
 body:
 - type: textarea
   id: describe
   attributes:
-    label: Description / Summary
+    label: Describe the problem/need and solution
     description: |
-      Describe the enhancement you'd like to see. Provide as much context as possible and link to related issues and/or pull requests. Include screenshots if there is prior art you'd like to refer to.
-      This section should contain "what" you are proposing.
-    placeholder: |
-      - I wish I were able to...
-      - It would be useful if XXX behaved in YYY way...
-      - XXX feature would be better if it would...
+      - Describe the problem or need you'd like to address.
+      - Include enough context so that somebody can quickly understand the need.
+      - Note what kind of users would benefit from this solution. 
+    value: |
+      **Context**
+      In situations where you're trying to do XXX.
+
+      **Problem / Idea**
+      You also want to do YYY, but this isn't currently possible.
+
+      **Solution**
+      We could make YYY possible by adding ZZZ new features.
+
+      **Benefit**
+      This would benefit the people trying to do XXX because...
+
   validations:
     required: true
 
-- type: textarea
-  id: value
-  attributes:
-    label: Value / benefit
-    description: |
-      What is the value in resolving this issue, and who will benefit from it?
-      Include any information that could help us prioritize the enhancement.
-
-    placeholder: |
-      - This would facilitate XXX which is a common use-case
-      - It's really annoying when XXX and this would fix it
-      - This would make it possible to XXX which YYY people care about.
-
-  validations:
-    required: true
 
 - type: textarea
   id: implementation
   attributes:
-    label: Implementation details
+    label: Guide for implementation
     description: |
-      Anything that will help others understand how this issue could be addressed. Where appropriate, note locations in a codebase where a change would need to be made, or other considerations that should be taken.
-      This section should contain "how" this issue should be resolved.
-
-      _If you can't think of anything then just leave this blank and we can fill it in later! This can be filled in as we understand more about an issue._
+      Any guidance that will help others understand how this issue could be addressed.
+      Where appropriate, include:
+      
+      - locations in a codebase where a change would need to be made
+      - rough mock-ups and design-level suggestions
+      - screenshots of inspiration to take
 
     placeholder: |
       - This change would be probably need to be over here...
       - The best way to do this would be...
-      - There are a few ways to do this, we should choose between...
+      - Here are links to tools with similar features...
 
   validations:
     required: false
@@ -54,9 +55,9 @@ body:
 - type: textarea
   id: tasks
   attributes:
-    label: Tasks to complete
+    label: Tasks and updates
     description: |
-      Any concrete tasks that should be completed to resolve this issue.
+      Use this area to track ongoing work and to-do items.
       The more specific the better.
 
       _If you can't think of anything then just leave this blank and we can fill it in later! This can be filled in as we understand more about an issue._
