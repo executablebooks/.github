@@ -223,7 +223,7 @@ For Python packages, the test infrastructure should be implemented *via* [pytest
 
 ## Documentation
 
-A minimal description of the project should be contained in the README.md, then most documentation should generally be contained in a `docs` folder, using [Sphinx](http://www.sphinx-doc.org) (directly or *via* jupyter book) as the documentation generator.
+A minimal description of the project should be contained in the `README.md`, then most documentation should generally be contained in a `docs` folder, using [Sphinx](http://www.sphinx-doc.org) (directly or *via* jupyter book) as the documentation generator.
 
 Markdown style should generally follow that rules outlined in [markdownlint](https://github.com/markdownlint/markdownlint) and rST should similarly follow [rstcheck](https://github.com/myint/rstcheck), either of which may be added to the pre-commit configuration.
 
