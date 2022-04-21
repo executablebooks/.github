@@ -7,47 +7,24 @@ description: Suggest an idea for this project
 labels: [enhancement]
 body:
 - type: textarea
-  id: describe
+  id: context
   attributes:
-    label: Describe the problem/need and solution
+    label: Context
     description: |
+      - Provide background to help others understand this issue.
       - Describe the problem or need you'd like to address.
-      - Include enough context so that somebody can quickly understand the need.
-      - Note what kind of users would benefit from this solution. 
-    value: |
-      **Context**
-      In situations where you're trying to do XXX.
-
-      **Problem / Idea**
-      You also want to do YYY, but this isn't currently possible.
-
-      **Solution**
-      We could make YYY possible by adding ZZZ new features.
-
-      **Benefit**
-      This would benefit the people trying to do XXX because...
-
   validations:
     required: true
 
 
 - type: textarea
-  id: implementation
+  id: proposal
   attributes:
-    label: Guide for implementation
+    label: Proposal
     description: |
-      Any guidance that will help others understand how this issue could be addressed.
-      Where appropriate, include:
-      
-      - locations in a codebase where a change would need to be made
-      - rough mock-ups and design-level suggestions
-      - screenshots of inspiration to take
-
-    placeholder: |
-      - This change would be probably need to be over here...
-      - The best way to do this would be...
-      - Here are links to tools with similar features...
-
+      - A simple and clear description of what you're proposing.
+      - Ideas or constraints for how to implement this proposal
+      - Important considerations to think about or discuss
   validations:
     required: false
 
