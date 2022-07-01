@@ -1,6 +1,8 @@
 
 # Contributor Covenant Code of Conduct
 
+To report a Code of Conduct incident, see [Enforcement](#enforcement).
+
 ## Our Pledge
 
 We as members, contributors, and leaders pledge to make participation in our
@@ -60,8 +62,14 @@ representative at an online or offline event.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported to the community leaders responsible for enforcement at executablebooks@gmail.com.
-All complaints will be reviewed and investigated promptly and fairly.
+reported to the community leaders responsible for enforcement at the following email:
+
+- executablebooks-conduct@googlegroups.com
+
+This email is monitored by the Code of Conduct Team, which is currently composed
+of the Project Investigators of the Sloan grant that funded this project.
+This group monitors all messages to the address above, and will review,
+investigate, and respond to any reports.
 
 All community leaders are obligated to respect the privacy and security of the
 reporter of any incident.
