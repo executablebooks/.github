@@ -21,11 +21,6 @@ body:
       But instead ___ happens
       Here's an error message I ran into...
 
-      ```console
-      $ jupyter-book build mybook
-      ERROR ...
-      ```
-
       **problem**
       This is a problem for people doing ___ because ___.
       
@@ -62,21 +57,12 @@ body:
 
       - The output of:      
         ```bash
-        jupyter-book --version
+        jupyter server extension list
+        jupyter labextension list
+        pip list
         ```
       - The version of Python you're using.
       - Your operating system
       - Versions of any other relevant tools you're using.
-    placeholder: |
-      ```
-      ❯ jupyter-book --version
-        Jupyter Book      : 0.11.2
-        External ToC      : 0.2.2
-        MyST-Parser       : 0.13.7
-        MyST-NB           : 0.12.3
-        Sphinx Book Theme : 0.1.0
-        Jupyter-Cache     : 0.4.2
-        NbClient          : 0.5.3
-      ```
   validations:
     required: false
