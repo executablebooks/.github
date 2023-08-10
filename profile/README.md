@@ -11,7 +11,7 @@ As well as many other tools for parsing, headless execution of Jupyter Notebooks
 
 ## Contribute to a Project 👩‍💻
 
-[Ask a question](https://github.com/orgs/executablebooks/discussions) or [show and tell](https://github.com/orgs/executablebooks/discussions/categories/show-and-tell) the community about your project or use of MyST, or come to a [monthly team meeting](https://executablebooks.org/en/latest/meetings/index.html).
+[Ask a question](https://github.com/orgs/executablebooks/discussions) or [show and tell](https://github.com/orgs/executablebooks/discussions/categories/show-and-tell) the community about your project or use of MyST, or come to a [monthly team meeting](https://compass.executablebooks.org/en/latest/meetings/index.html).
 
 All of our projects are open source and welcome and and all contributions -- from documenting problems you run into, adding to documentation, [telling people](https://twitter.com/executablebooks) about your project and our mission, and _of course_ contributing to the code! Please review our [Code of Conduct](../CODE_OF_CONDUCT.md) to learn about some of the conventions we follow.
 
@@ -25,4 +25,4 @@ Visit <https://mystmd.org> to see an interactive demo of working with MyST -- an
 
 ## About the project ℹ️
 
-Learn more about our project’s [goals and strategy](https://executablebooks.org/en/latest/about.html), see a list of core [team members](https://executablebooks.org/en/latest/team.html), and come to our [next team meeting](https://executablebooks.org/en/latest/meetings/index.html).
+Learn more about our project’s [goals and strategy](https://executablebooks.org/en/latest/about.html), see a list of core [team members](https://executablebooks.org/en/latest/team.html), and come to our [next team meeting](https://compass.executablebooks.org/en/latest/meetings/index.html).
