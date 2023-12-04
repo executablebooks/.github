@@ -123,7 +123,7 @@ We want to follow these principles in deciding which versions to support, and ho
 ### Python
 
 We support **all `3.X` releases that Python also supports**.
-We follow the [Python End of Life dates](https://devguide.python.org/#status-of-python-branches) to determine which versions versions this means.
+We follow the [Python End of Life dates](https://devguide.python.org/versions/#supported-versions) to determine which versions versions this means.
 
 Our test suites should test against the following Python versions:
 
